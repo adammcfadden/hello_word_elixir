@@ -1,6 +1,6 @@
-defmodule EliTest do
+defmodule PortalTest do
   use ExUnit.Case
-  doctest Eli
+  doctest Portal
 
   test "the truth" do
     assert 1 + 1 == 2

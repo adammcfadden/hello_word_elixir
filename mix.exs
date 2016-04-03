@@ -1,8 +1,8 @@
-defmodule Eli.Mixfile do
+defmodule Portal.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :eli,
+    [app: :portal,
      version: "0.0.1",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
@@ -15,7 +15,7 @@ defmodule Eli.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger],
-     mod: {Eli, []}]
+     mod: {Portal, []}]
   end
 
   # Dependencies can be Hex packages:
