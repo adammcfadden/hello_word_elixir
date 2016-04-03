@@ -48,6 +48,18 @@ defmodule Portal do
   end
 
   @doc """
+  Pushes data to the left of the given `portal`.
+  """
+  def push_left(portal) do
+    case Portal.Door.pop(portal.right) do
+      :error    -> :ok
+      {:ok, h}  -> Portal.Door.push(portal.left, h)
+    end
+
+    portal
+  end
+
+  @doc """
   Shoots a new door with the given `color`
   """
   def shoot(color) do
